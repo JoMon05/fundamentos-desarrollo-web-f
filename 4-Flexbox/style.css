@@ -6,9 +6,12 @@
 /* Padre */
 .container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row; /* defecto row */
+    justify-content: start;
+    /* align-items: stretch; */
+    /* align-content: stretch; */
+    flex-wrap: wrap;/* defecto nowrap */
+    gap:30px;
 
     width: 600px;
     height: 600px;
@@ -18,10 +21,18 @@
 }
 /* Hijo */
 .ball{
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height: 100px; 
     background-color: orange;
-    border-radius: 50%;
+    border-radius: 10px;
     border: 3px solid black;
     color: white;
+}
+
+.tres{
+    background-color: #232323;
+    align-self: center;
 }
