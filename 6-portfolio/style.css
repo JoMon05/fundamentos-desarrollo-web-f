@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color: #151515;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: #151515;
+    position: sticky;/* respeta el punbto inicial de la caja y a partir de que el scroll toca el elemento se mueve con el*/
+    top: 0;
+    z-index: 2; 
+}
+
+.container{
+    max-width: 900px;
+    margin: auto; /* centrar cajas */
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.header-content ul{
+    display: flex;
+    gap: 10px; /* todos los elementos se separan entre si */
+
+}
+
+/* seccion welcome */
+
+
+.welcome-content{
+    display: flex;
+    padding: 50px 0;
+}
+
+.col-1{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  /*   background-color: blueviolet; */
+    flex: 1; /* proporcion de 2 */
+}
+
+.col-1 h3{ font-size: 3rem;}
+.col-1 h3 span{
+    text-decoration: underline;
+    text-decoration-color:aquamarine;
+}
+
+.col-1 a{
+    color: #fff;
+    text-transform: uppercase; /* lo pone en mayus */
+    letter-spacing: 2px;/* espacio entre letras */
+    text-decoration-color:aquamarine;
+}
+
+.col-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+ /*    background-color: rgb(65, 26, 102); */
+    flex: 1; /* proporcion de 1 */
+}
+
+.img-pizza, .img-hoja, .img-tomato{
+    position: absolute;
+
+}
+.img-pizza{
+    filter: blur(1.5px);
+}
+
+.img-tomato{
+    width: 80%;
+    right: -30px;
+    top: 0;
+
+}
+
+.img-hoja{
+    width: 40%;
+    left: 0;
+    bottom: 40px;
+    transform: rotate(130deg); /* rota la img */
+}
