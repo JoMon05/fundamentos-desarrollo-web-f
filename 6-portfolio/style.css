@@ -146,7 +146,7 @@ background-color: rgb(23, 126, 211);
     top: 0;
     left: 0;
     opacity: 0;
-    transition-duration: .5s;
+    transition-duration: .5s; /* la duración entre opacity 0 a 1 */
 }
 
 .product-card:hover .card-hover{ /* el hover es lo que va a pasar cuando el cursor este sobre el elemento y el .card-hover manda a llamar a ese elemento para hacerle un cambio */
