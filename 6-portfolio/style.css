@@ -206,7 +206,7 @@ padding: 15px;
         flex-direction: column-reverse;
     }    
     .col-2{
-       background-color: rgb(65, 26, 102)!important; 
+      /*  background-color: rgb(65, 26, 102)!important;  */
         flex: none; 
         height: 230px;
     }
