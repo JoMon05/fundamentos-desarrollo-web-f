@@ -24,14 +24,17 @@ header{
 }
 
 .header-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
     padding: 30px 0;
 }
 
+
 .header-content ul{
     display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    grid-column: 3;
     gap: 10px; /* todos los elementos se separan entre si */
 
 }
@@ -52,12 +55,20 @@ header{
     flex: 1; /* proporcion de 2 */
 }
 
-.col-1 h3{ font-size: 3rem;}
-.col-1 h3 span{
+.col-1 h3{ 
+    font-size: 1.5rem;
+    text-align:center;
+        }
+.col-1 h3 a{
     text-decoration: underline;
+    text-transform: none;
     text-decoration-color:aquamarine;
+    
 }
 
+.col-1 p{
+    text-align: justify;
+}
 .col-1 a{
     color: #fff;
     text-transform: uppercase; /* lo pone en mayus */
@@ -76,26 +87,8 @@ header{
     overflow: hidden;
 }
 
-.img-pizza, .img-hoja, .img-tomato{
+.img-reactor{
     position: absolute;
-
-}
-.img-pizza{
-    filter: blur(1.5px);
-}
-
-.img-tomato{
-    width: 80%;
-    right: -30px;
-    top: 0;
-
-}
-
-.img-hoja{
-    width: 40%;
-    left: 0;
-    bottom: 40px;
-    transform: rotate(130deg); /* rota la img */
 }
 
 /* seccion productos */
@@ -119,7 +112,9 @@ header{
     position: relative;
     border-radius:30px;
     overflow: hidden; /* muestra solo los elementos dentro de la caja ocultando lo demas */
+    height:fit-content;
 }
+
 
 /* .productos-content div:nth-child(1){
 background-color: rgb(23, 126, 211);
@@ -199,7 +194,7 @@ padding: 15px;
 .skills-content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 50px;
     padding: 30px;
 }
 
@@ -207,21 +202,34 @@ padding: 15px;
     display: grid;
     row-gap: 10px;
 }
+
+.container > h1{
+    padding-top: 2rem;
+    text-align: center;
+    text-decoration:underline;
+}
 /* Primer breakpoint tablet */
 
 @media screen and (max-width:992px){
     body{
       /*   background-color: tomato; */
     }
+    .header-content>h1{
+        grid-column: 2;
+      text-align: center;
+     }
     .welcome-content{
-        flex-direction: column-reverse;
+        padding: 1.5rem;
+    }
+    .welcome-content{
+        flex-direction: column;
     }    
     .col-2{
       /*  background-color: rgb(65, 26, 102)!important;  */
         flex: none; 
         height: 230px;
     }
-    .img-pizza, .img-hoja, .img-tomato{
+    .img-reactor{
         width: 230px;
     
     }
@@ -242,6 +250,13 @@ padding: 15px;
 @media screen and (max-width:576px){
     body{
         /* background-color: blueviolet; */
+    }
+    .header-content h1{
+        padding-left: 20px;
+        text-align: center;
+     }
+    .welcome-content{
+        padding: 1.5rem;
     }
     .productos-content{
         display: grid;
